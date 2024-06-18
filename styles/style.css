@@ -17,7 +17,8 @@
 .decorated-zone {
   position: relative;
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
@@ -44,13 +45,17 @@
   border-left: 1px solid var(--secondary-color, #ff0070);
 }
 
-.link {
-  text-decoration: none;
+.shadow {
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 
+.link {
+  text-decoration: none;
+}
+
 .link:hover {
-  text-decoration: underline;
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070), 0 0 transparent;
+  border-bottom: 1px solid currentColor;
 }
 
 .link:focus {
@@ -73,7 +78,8 @@
 }
 
 .rec-icon::before {
-  content: "REC";
+  content: "rec";
+  text-transform: uppercase;
   color: var(--accent-color, #ff0070);
   line-height: 24px;
 }
@@ -85,7 +91,7 @@
   width: 9px;
   border-radius: 50%;
   background: var(--accent-color, #ff0070);
-  box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
 }
 
 .accent-text {
